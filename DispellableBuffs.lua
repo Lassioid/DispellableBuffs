@@ -16,7 +16,7 @@ function hasAura(auras)
     for y = 1, 25 do
         local auraY = UnitBuff("target", y);
         if auraY ~= nil then
-            isActive = isListedAura(auras, auraY)
+            if auras[auraY] then isActive = true end
         end
     end
     return isActive
@@ -74,10 +74,10 @@ UnitAuraKit:SetScript("OnEvent", function(self, event, unit)
             local buff = UnitBuff("target", x)
             if unit == "target" and buff ~= nil then
                 if isListedAura(defensive_auras, buff) then
-                    SetPortraitToTexture(SpellIcon.tex, defensive_auras[buff])
                     SpellIcon:Show()
+                    SetPortraitToTexture(SpellIcon.tex, defensive_auras[buff])
                 end
-                if not hasAura(defensive_auras) then 
+                if not hasAura(defensive_auras) then
                     SpellIcon:Hide()
                 end
             end   
