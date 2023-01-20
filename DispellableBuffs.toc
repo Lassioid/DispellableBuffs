@@ -1,0 +1,12 @@
+## Interface: 30401
+## Version: 0.3.5
+## Title: DispellableBuffs
+## Notes: DispellableBuffs
+## Author: LassiKetola
+## X-Min-Interface-Classic: 11304
+## X-Min-Interface-BCC: 20504
+## X-Min-Interface-Wrath: 30401
+
+DispellableBuffs.lua
+AreaChangeListener.lua
+Util.lua
